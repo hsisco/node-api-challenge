@@ -3,8 +3,8 @@ const helmet = require('helmet');
 const morgan = require('morgan');
 const server = express();
 
-const actionRouter = require('./.js');
-const projectRouter = require('./.js');
+const actionRouter = require('./routes/actionRouter');
+const projectRouter = require('./routes/projectRouter');
 
 server.use(express.json(), helmet(), morgan('dev'), logger);
 
