@@ -5,7 +5,7 @@ const Projects = require('../data/helpers/projectModel');
 
 // CREATE NEW PROJECT
 router.post('/', validateProjectId, (req, res) => {
-  Project.insert(req.body)
+  Projects.insert(req.body)
   .then(project => {
     res.status(201).json({ success: "New project created", project })
   })
